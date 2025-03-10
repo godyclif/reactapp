@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playpen Sans', cursive;
+  background-color: #090909;
+  color: white;
+}
+
+.create-account-container {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  background-color: #090909;
+  background-image: radial-gradient(circle at 50% 50%, rgba(50, 80, 50, 0.15) 0%, transparent 70%);
+  position: relative;
+  overflow: hidden;
+}
+
+.create-account-container::before,
+.create-account-container::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(30, 60, 40, 0.1);
+  z-index: 0;
+}
+
+.create-account-container::before {
+  top: -50px;
+  right: -50px;
+}
+
+.create-account-container::after {
+  bottom: -80px;
+  left: -80px;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-section {
+  padding: 20px 0 40px 0;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.terms-checkbox input {
+  margin-top: 4px;
+  transform: scale(1.2);
+}
+
+.terms-link {
+  color: #76D343;
+  text-decoration: underline;
+}
+
+.terms-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.terms-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.subtitle {
+  font-size: 0.87rem;
+  line-height: 1.4;
+  opacity: 1;
+  max-width: 360px;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; 
+}
+
+.input-group label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 15px; 
+  height: 42px; 
+  border-radius: 50px;
+  border: none;
+  background-color: #90BE56;
+  color: #000;
+  font-family: 'Playpen Sans', cursive;
+  font-size: 1.1rem; 
+  line-height: 1; 
+}
+
+.form-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+.phone-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.country-code {
+  position: absolute;
+  left: 15px;
+  color: #000;
+  font-family: 'Playpen Sans', cursive;
+  font-size: 1.1rem; 
+  z-index: 2;
+  line-height: 1;
+}
+
+.phone-input {
+  padding-left: 60px;
+}
+
+
+.next-button {
+  margin-top: 20px;
+  width: max-content;
+  padding: 10px 40px;
+  position: relative;
+  height: 48px;
+  border-radius: 50px 20px;
+  border: none;
+  background-color: #548E6B;
+  color: #000;
+  font-family: 'Playpen Sans', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(144, 190, 86, 0.3);
+
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.next-button:hover {
+  background-color: #477a5c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(84, 142, 107, 0.4);
+}
+
+.next-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(84, 142, 107, 0.3);
+}
+
+.next-button:hover {
+  background-color: #7dac44;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(144, 190, 86, 0.4);
+}
+
+.next-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(144, 190, 86, 0.3);
+}
+
+.terms-section {
+  margin-top: auto;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1.1rem;
+}
+
+.terms-section a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Playpen Sans', cursive;
+}
+
+.terms-section a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 60px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* Add this to your existing CreateAccount.css file */
+
+/* Add these styles to your existing CreateAccount.css file */
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #33f333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgb(255, 255, 255, 0.05);
+}
+
+.back-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Adjust the content-wrapper to account for the back button */
+.content-wrapper {
+  position: relative;
+  /* Keep your existing styles */
+}
