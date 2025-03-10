@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./CreateAccount.css";
 
-const CreatAccount: React.FC = () => {
+const CreateAccount: React.FC = () => {
   // State for first step
   const [firstName, setFirstName] = useState("");
   const [middleName, setMiddleName] = useState("");
